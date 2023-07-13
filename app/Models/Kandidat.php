@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Kandidat extends Model
+{
+    use HasFactory;
+
+    protected $table ='kandidat';
+    protected $primaryKey ='id';
+    protected $fillable = [
+        'nama_calon',
+        'kelas',
+        'jurusan',
+        'nomor_kandidat',
+    ];
+
+    public function JurusaN()
+    {
+        return $this->belongsTo(Jurusan::class, 'jurusan', 'id');
+    }
+
+
+}
