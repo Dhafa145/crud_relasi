@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('nama_calon');
             $table->string('kelas');
-            $table->string('jurusan');
+            $table->foreignId('jurusan');
             $table->string('nomor_kandidat');
-           
+            $table->foreignId('jurusan')->references('id')->on('jurusan');
             $table->timestamps();
         });
     }

@@ -40,7 +40,7 @@
                                 <label class="font-weight-bold">JURUSAN</label>
                                 <select class="form-control" name="jurusan" id="jurusan">
                                     @foreach ($jurusan as $item)
-                                    @if($item->jurusan==$kandidat->jurusan || $item->id == old('jurusan') )
+                                    @if($item->id==$kandidat->jurusan || $item->id == old('jurusan') )
                                   <option selected value="{{ $item->id}}" >{{ $item->jurusan}}
                                  </option>
                                  @else
